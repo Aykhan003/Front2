@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkyDesk — Flight Reservation System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="brand-mark">✈</span>
+      <div>
+        <div class="brand-name">SkyDesk</div>
+        <div class="brand-sub">Flight Reservation System</div>
+      </div>
+    </div>
+    <nav id="nav">
+      <a data-page="dashboard" class="active"><span>◎</span>İdarə paneli</a>
+      <a data-page="flights"><span>⇄</span>Uçuşlar</a>
+      <a data-page="reservations"><span>▤</span>Rezervasiyalar</a>
+      <a data-page="tickets"><span>⌗</span>Biletlər</a>
+      <a data-page="passengers"><span>☺</span>Sərnişinlər</a>
+      <a data-page="aircraft"><span>△</span>Təyyarələr</a>
+      <a data-page="airports"><span>◇</span>Hava limanları</a>
+      <a data-page="pricerules"><span>₼</span>Qiymət qaydaları</a>
+      <a data-page="reports"><span>▥</span>Hesabatlar</a>
+    </nav>
+    <button class="reset-btn" id="resetData">Demo məlumatları sıfırla</button>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <h1 id="pageTitle">İdarə paneli</h1>
+      <div class="clock" id="clock"></div>
+    </header>
+    <section id="view"></section>
+  </main>
+
+  <div class="modal-backdrop" id="modal">
+    <div class="modal">
+      <div class="modal-head">
+        <h2 id="modalTitle"></h2>
+        <button class="icon-btn" id="modalClose">✕</button>
+      </div>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
